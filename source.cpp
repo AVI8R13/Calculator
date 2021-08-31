@@ -9,7 +9,7 @@ int yesNo()
 {
 	char yesNo;
 
-	cout << "Return to start? [y/n]\n";
+	cout << "\nReturn to start? [y/n]\n";
 
 	cin >> yesNo;
 
@@ -136,7 +136,7 @@ void multiplication()
 
 void division()
 {
-	int x, y;
+	float x, y;
 
 	cout << "Enter the numbers you would like to divide: ";
 	cin >> x >> y;
@@ -144,9 +144,100 @@ void division()
 	yesNo();
 }
 
+void area()
+{
+	float h, w, r, b, x, option;
+
+	cout << "What shape would you like to find the area of?\n\nQuadrilaterals [1]\n\nCircles [2]\n\nTriangles [3]\n\n";
+	cin >> option;
+
+	if (option == 1)
+	{
+		cout << "Enter the height and width of the quadrilateral: ";
+		cin >> h >> w;
+		cout << "\nArea: " << h * w;
+		yesNo();
+	}
+	else if (option == 2)
+	{
+		cout << "\nEnter the radius of the circle: ";
+		cin >> r;
+		cout << "Area: " << r * 3.14;
+		yesNo();
+	}
+	else if (option == 3)
+	{
+		cout << "Enter the height and base of the triangle: ";
+		cin >> h >> b;
+		x = h * b;
+		cout << "\NArea: " << x / 2;
+		yesNo();
+
+	}
+}
+
+void volume()
+{
+	float h, w, d;
+	int option;
+	//remember to add more shapes!!
+	cout << "Enter the height, width and depth of you shape: ";
+	cin >> h >> w >> d;
+	cout << "\nVolume: " << h * w * d;
+	yesNo();
+
+}
+
+void surfaceArea()
+{
+	float h1, h2, h3, w1, w2, w3, x, y, z, i;
+
+	cout << "Enter the height and width of on of the faces: ";
+	cin >> h1 >> w1;
+	cout << "Enter the height and width of another face: ";
+	cin >> h2 >> w2;
+	cout << "Enter the height and width of a thrid face: ";
+	cin >> h3 >> w3;
+	x = h1 * w1;
+	y = h2 * w2;
+	z = h3 * w3;
+	i = x + y + z;
+	i = i * 2;
+	cout << "Surface area: " << i;
+	yesNo();
+}
+
 void geometry()
 {
 	int x, y, z;
+	int option;
+
+	cout << "What type of geometry would you like to do?\n\nArea [1]\n\nVolume [2]\n\nSurface area [3]\n\nOther [4]\n\n";
+
+	cin >> option;
+
+	if (option == 1)
+	{
+		area();
+	}
+	else if (option == 2)
+	{
+		volume();
+	}
+	else if (option == 3)
+	{
+		surfaceArea();
+	}
+	else if (option == 4)
+	{
+
+	}
+	else
+	{
+		cout << "Invalid input!\n\n";
+		yesNo();
+	}
+	
 
 
 }
@@ -178,7 +269,7 @@ void Calc()
 	}
 	else if (option == 5)
 	{
-		cout << "Function is incomplete!";
+		geometry();
 	}
 	else
 	{
@@ -195,7 +286,7 @@ int main()
 
 	system("cls");
 
-	cout << "What would you like to do?\n\n1 to x [1]\n\nGenerate a fibbonacci sequence [2]\n\nGenerate cube numbers up to x [3]\n\nGenerate square numbers up to x [4]\n\nUse a geometrical calculator [5]\n\n";
+	cout << "What would you like to do?\n\nGenerate a 1 to x sequence [1]\n\nGenerate a fibbonacci sequence [2]\n\nGenerate cube numbers up to x [3]\n\nGenerate square numbers up to x [4]\n\nUse a geometrical calculator [5]\n\n";
 
 	cin >> option;
 

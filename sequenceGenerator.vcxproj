@@ -24,6 +24,7 @@
     <ProjectGuid>{a63b5427-b216-4527-bf5d-222518a83179}</ProjectGuid>
     <RootNamespace>sequenceGenerator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Geometrical Calculator</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
