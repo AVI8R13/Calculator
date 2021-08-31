@@ -25,30 +25,28 @@ int yesNo()
 
 void toX()
 {
+	system("cls");
+	
+	int y;
 	int x;
-	int i = 1;
 
-	cout << "What number would you like to print to?\nPrinting to number: ";
-	cin >> x;
-	cout << "\n";
-	x = x + 1;
+	cout << "Enter the number you want to count to: ";
 
-	for (int i = 1; i < x; i++)
+	cin >> y;
+
+	for (int x = 1; x <= y; x++) 
 	{
-		cout << "\n" << i << endl;
-		if (i == x - 1)
-		{
-			cout << "\n";
-			cout << "Complete!\n";
-		}
+		cout << "\n " << x;
 	}
-	system("pause");
+	cout << "\n\nPrinted integers 1 to " << y << endl;
+
 	yesNo();
 
 }
 
 void fibbonacci()
 {
+	system("cls");
 	int t1 = 0, t2 = 1, nT = 0, n;
 
 	cout << "Enter a positive integer: ";
@@ -71,6 +69,7 @@ void fibbonacci()
 
 void square()
 {
+	system("cls");
 	int i = 1;
 	int x;
 
@@ -88,6 +87,7 @@ void square()
 
 void cubes()
 {
+	system("cls");
 	int i = 1;
 	int x;
 
@@ -105,7 +105,8 @@ void cubes()
 
 void addition()
 {
-	int x, y;
+	system("cls");
+	float x, y;
 
 	cout << "Enter the numbers you would like to add: ";
 	cin >> x >> y;
@@ -116,7 +117,8 @@ void addition()
 
 void subtraction()
 {
-	int x, y;
+	system("cls");
+	float x, y;
 
 	cout << "Enter the numbers you would like to subtract: ";
 	cin >> x >> y;
@@ -126,7 +128,8 @@ void subtraction()
 
 void multiplication()
 {
-	int x, y;
+	system("cls");
+	float x, y;
 
 	cout << "Enter the numbers you would like to multiply: ";
 	cin >> x >> y;
@@ -136,6 +139,7 @@ void multiplication()
 
 void division()
 {
+	system("cls");
 	float x, y;
 
 	cout << "Enter the numbers you would like to divide: ";
@@ -146,6 +150,7 @@ void division()
 
 void area()
 {
+	system("cls");
 	float h, w, r, b, x, option;
 
 	cout << "What shape would you like to find the area of?\n\nQuadrilaterals [1]\n\nCircles [2]\n\nTriangles [3]\n\n";
@@ -178,6 +183,7 @@ void area()
 
 void volume()
 {
+	system("cls");
 	float h, w, d;
 	int option;
 	//remember to add more shapes!!
@@ -190,6 +196,7 @@ void volume()
 
 void surfaceArea()
 {
+	system("cls");
 	float h1, h2, h3, w1, w2, w3, x, y, z, i;
 
 	cout << "Enter the height and width of on of the faces: ";
@@ -209,10 +216,10 @@ void surfaceArea()
 
 void geometry()
 {
-	int x, y, z;
+	system("cls");
 	int option;
 
-	cout << "What type of geometry would you like to do?\n\nArea [1]\n\nVolume [2]\n\nSurface area [3]\n\nOther [4]\n\n";
+	cout << "What type of geometry would you like to do?\n\nArea [1]\n\nVolume [2]\n\nSurface area [3]\n\n";
 
 	cin >> option;
 
@@ -228,10 +235,6 @@ void geometry()
 	{
 		surfaceArea();
 	}
-	else if (option == 4)
-	{
-
-	}
 	else
 	{
 		cout << "Invalid input!\n\n";
@@ -242,12 +245,43 @@ void geometry()
 
 }
 
+void otherMaths()
+{
+	system("cls");
+	int option;
+	float x;
+
+	cout << "What would you like to do?\n\n\nFind a square root [1]\n\nSquare a number [2]\n\nCube a number [3]\n\nMultiply a number by itself x times [4]\n\n";
+	cin >> option;
+	if (option == 1)
+	{
+
+	}
+	else if (option == 2)
+	{
+
+	}
+	else if (option == 3)
+	{
+
+	}
+	else if (option == 4)
+	{
+
+	}
+	else
+	{
+		cout << "Invalid input!\n\n";
+		yesNo();
+	}
+}
+
 void Calc()
 {
-
+	system("cls");
 	int option;
 
-	cout << "What would you like to do?\n\nAddition [1]\n\nSubtraction [2]\n\nDivision [3]\n\nMultiplication [4]\n\nGeometry [5]\n\n";
+	cout << "What would you like to do?\n\nAddition [1]\n\nSubtraction [2]\n\nDivision [3]\n\nMultiplication [4]\n\nGeometry [5]\n\nSquare roots, sqares and cubes [6]\n\n";
 
 	cin >> option;
 
@@ -271,6 +305,10 @@ void Calc()
 	{
 		geometry();
 	}
+	else if (option == 6)
+	{
+
+	}
 	else
 	{
 		cout << "Invalid input!\n\n";
@@ -279,18 +317,13 @@ void Calc()
 
 }
 
-int main()
+void sequences()
 {
 	int option;
-	char yesNo;
 
-	system("cls");
-
-	cout << "What would you like to do?\n\nGenerate a 1 to x sequence [1]\n\nGenerate a fibbonacci sequence [2]\n\nGenerate cube numbers up to x [3]\n\nGenerate square numbers up to x [4]\n\nUse a geometrical calculator [5]\n\n";
+	cout << "What type of sequence would you like to generate?\n\n1 to X [1]\n\nFibbonacci [2]\n\nSquares to X [3]\n\nCubes to X [4]\n\n";
 
 	cin >> option;
-
-	cout << "\n";
 
 	if (option == 1)
 	{
@@ -308,7 +341,32 @@ int main()
 	{
 		cubes();
 	}
-	else if (option == 5)
+	else
+	{
+		cout << "Invalid input\n\n";
+		yesNo();
+	}
+
+}
+
+int main()
+{
+	int option;
+	char yesNo;
+
+	system("cls");
+
+	cout << "What would you like to do?\n\nGenerate sequences [1]\n\nGeometrical Calculator [2]\n\n";
+
+	cin >> option;
+
+	cout << "\n";
+
+	if (option == 1)
+	{
+		sequences();
+	}
+	else if (option == 2)
 	{
 		Calc();
 	}
