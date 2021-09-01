@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include <math.h>
 
 using namespace std;
 
@@ -103,6 +104,7 @@ void cubes()
 	yesNo();
 }
 
+
 void addition()
 {
 	system("cls");
@@ -153,7 +155,7 @@ void area()
 	system("cls");
 	float h, w, r, b, x, option;
 
-	cout << "What shape would you like to find the area of?\n\nQuadrilaterals [1]\n\nCircles [2]\n\nTriangles [3]\n\n";
+	cout << "What shape would you like to find the area of?\n\nQuadrilaterals [1]\n\nCircles [2]\n\nTriangles [3]\n\nGo back [4]\n\n";
 	cin >> option;
 
 	if (option == 1)
@@ -178,6 +180,15 @@ void area()
 		cout << "\NArea: " << x / 2;
 		yesNo();
 
+	}
+	else if (option == 4)
+	{
+		main();
+	}
+	else
+	{
+		cout << "Invalid input!";
+		yesNo();
 	}
 }
 
@@ -219,7 +230,7 @@ void geometry()
 	system("cls");
 	int option;
 
-	cout << "What type of geometry would you like to do?\n\nArea [1]\n\nVolume [2]\n\nSurface area [3]\n\n";
+	cout << "What type of geometry would you like to do?\n\nArea [1]\n\nVolume [2]\n\nSurface area [3]\n\nGo back [4]\n\n";
 
 	cin >> option;
 
@@ -234,6 +245,10 @@ void geometry()
 	else if (option == 3)
 	{
 		surfaceArea();
+	}
+	else if (option == 4)
+	{
+		main();
 	}
 	else
 	{
@@ -250,24 +265,43 @@ void otherMaths()
 	system("cls");
 	int option;
 	float x;
+	float y;
 
-	cout << "What would you like to do?\n\n\nFind a square root [1]\n\nSquare a number [2]\n\nCube a number [3]\n\nMultiply a number by itself x times [4]\n\n";
+	cout << "What would you like to do?\n\n\nFind a square root [1]\n\nSquare a number [2]\n\nCube a number [3]\n\nX to the power of Y [4]\n\nGo back [5]\n\n";
 	cin >> option;
 	if (option == 1)
 	{
-
+		cout << "\n\nEnter the number you want to find the sqaure root of: ";
+		cin >> x;
+		cout << "\n\nSquare root of " << x << " : " << sqrt(x);
+		yesNo();
 	}
 	else if (option == 2)
 	{
-
+		cout << "\n\nEnter the number you want to square: ";
+		cin >> x;
+		cout << "\n\n" << x << " squared: " << x * x;
+		yesNo();
 	}
 	else if (option == 3)
 	{
-
+		cout << "\n\nEnter the number you want to cube: ";
+		cin >> x;
+		cout <<"\n\n" << x << " cubed: " << x * x * x;
+		yesNo();
 	}
 	else if (option == 4)
 	{
-
+		cout << "\n\nEnter a number: ";
+		cin >> x;
+		cout << "\n\nWhat power do you want to raise " << x << " to: ";
+		cin >> y;
+		cout <<"\n\n" << x << " to the power of " << y << ": " << pow(x, y);
+		yesNo();
+	}
+	else if (option == 5)
+	{
+		main();
 	}
 	else
 	{
@@ -276,12 +310,24 @@ void otherMaths()
 	}
 }
 
+void reciprocal()
+{
+	system("cls");
+
+	float x;
+
+	cout << "Enter the nuuumber you want to find the reciprocal of: ";
+	cin >> x;
+	cout << "\n\nThe reciprocal of " << x << " is 1/" << x;
+	yesNo();
+}
+
 void Calc()
 {
 	system("cls");
 	int option;
 
-	cout << "What would you like to do?\n\nAddition [1]\n\nSubtraction [2]\n\nDivision [3]\n\nMultiplication [4]\n\nGeometry [5]\n\nSquare roots, sqares and cubes [6]\n\n";
+	cout << "What would you like to do?\n\nAddition [1]\n\nSubtraction [2]\n\nDivision [3]\n\nMultiplication [4]\n\nGeometry [5]\n\nSquare roots, sqares and cubes [6]\n\nReciprocal [7]\n\nGo back [8]\n\nOption: ";
 
 	cin >> option;
 
@@ -307,7 +353,15 @@ void Calc()
 	}
 	else if (option == 6)
 	{
-
+		otherMaths();
+	}
+	else if (option == 7)
+	{
+		reciprocal();
+	}
+	else if (option == 8)
+	{
+		main();
 	}
 	else
 	{
@@ -321,7 +375,7 @@ void sequences()
 {
 	int option;
 
-	cout << "What type of sequence would you like to generate?\n\n1 to X [1]\n\nFibbonacci [2]\n\nSquares to X [3]\n\nCubes to X [4]\n\n";
+	cout << "What type of sequence would you like to generate?\n\n1 to X [1]\n\nFibbonacci [2]\n\nSquares to X [3]\n\nCubes to X [4]\n\nGo back [5]\n\n";
 
 	cin >> option;
 
@@ -340,6 +394,10 @@ void sequences()
 	else if (option == 4)
 	{
 		cubes();
+	}
+	else if (option == 5)
+	{
+		main();
 	}
 	else
 	{
