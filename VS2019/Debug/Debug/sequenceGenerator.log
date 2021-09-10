@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (sequenceGenerator.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  source.cpp
+C:\Users\mario\source\repos\sequenceGenerator\source.cpp(239,6): warning C4101: 'option': unreferenced local variable
+C:\Users\mario\source\repos\sequenceGenerator\source.cpp(462,10): warning C4129: 'S': unrecognized character escape sequence
+C:\Users\mario\source\repos\sequenceGenerator\source.cpp(31): warning C4715: 'yesNo': not all control paths return a value
+  sequenceGenerator.vcxproj -> C:\Users\mario\source\repos\sequenceGenerator\Debug\Geometrical Calculator.exe
