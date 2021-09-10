@@ -1,13 +1,19 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
+#include <fstream>
 
 using namespace std;
 
 int main();
 
+ofstream answers("answers.txt");
+
 int yesNo()
 {
+	system("pause");
+	system("cls");
+
 	char yesNo;
 
 	cout << "\nReturn to start? [y/n]\n";
@@ -29,7 +35,7 @@ void toX()
 	system("cls");
 	
 	int y;
-	int x;
+	int x{};
 
 	cout << "Enter the number you want to count to: ";
 
@@ -40,7 +46,6 @@ void toX()
 		cout << "\n " << x;
 	}
 	cout << "\n\nPrinted integers 1 to " << y << endl;
-
 	yesNo();
 
 }
@@ -162,8 +167,34 @@ void area()
 	{
 		cout << "Enter the height and width of the quadrilateral: ";
 		cin >> h >> w;
-		cout << "\nArea: " << h * w;
-		yesNo();
+		if (h == w)
+		{
+			system("cls");
+			cout << "Area: " << h * w << "\n\n\n";
+			cout << "To find the area of a quadrilateral do h* w\n\n\n";
+			cout << " " << w << "cm\n";
+			cout << "------------" << endl;
+			cout << "|          |" << endl;
+			cout << "|          | "<< h<<"cm" << endl;
+			cout << "|          |" << endl;
+			cout << "------------" << endl;
+			cout << "\n\n\n";
+			yesNo();
+		}
+		else
+		{
+			system("cls");
+			cout << "Area: " << h * w;
+			cout << "\n\n\n";
+			cout << "To find the area of a quadrilateral do h* w\n\n\n";
+			cout <<" " << w << "cm\n";
+			cout << "-----------------" << endl;
+			cout << "|               |" << h << "cm" << endl;
+			cout << "|               |" << endl;
+			cout << "-----------------" << endl;
+			cout << "\n\n\n";
+			yesNo();
+		}
 	}
 	else if (option == 2)
 	{
@@ -177,7 +208,16 @@ void area()
 		cout << "Enter the height and base of the triangle: ";
 		cin >> h >> b;
 		x = h * b;
-		cout << "\NArea: " << x / 2;
+		cout << "\nArea: " << x / 2 << "\n\n";
+		cout << "To find the area of a triangle, do h*b/2.\n\n\n";
+		cout << "           /\\      |      "<< endl;
+		cout << "          /  \\     |       "<< endl;
+		cout << "         /    \\    |        "<< endl;
+		cout << "        /      \\   | "<<h <<  "cm"<< endl;
+		cout << "       /        \\  |       "<< endl;
+		cout << "      /          \\ |      "<< endl;
+		cout << "      -----------  |     " << endl;
+		cout << "         " << b << "cm\n\n" << endl;
 		yesNo();
 
 	}
@@ -198,9 +238,13 @@ void volume()
 	float h, w, d;
 	int option;
 	//remember to add more shapes!!
-	cout << "Enter the height, width and depth of you shape: ";
-	cin >> h >> w >> d;
-	cout << "\nVolume: " << h * w * d;
+	cout << "Enter the height of the shape: ";
+	cin >> h;
+	cout << "\nEnter the width of your shape: ";
+	cin >> w;
+	cout << "\nEnter the dpeth of your shape: ";
+	cin >> d;
+	cout << "\n\nVolume: " << h * w * d;
 	yesNo();
 
 }
@@ -224,6 +268,7 @@ void surfaceArea()
 	cout << "Surface area: " << i;
 	yesNo();
 }
+
 
 void geometry()
 {
@@ -414,11 +459,11 @@ int main()
 
 	system("cls");
 
-	cout << "What would you like to do?\n\nGenerate sequences [1]\n\nGeometrical Calculator [2]\n\n";
-
+	cout << "What would you like to do?\n\nGenerate sequences [1]\n\nGeometrical Calculator [2]\n\n\Source code available at: https://github.com/AVI8R13/Calculator"<< "\n\n";
+	
 	cin >> option;
 
-	cout << "\n";
+	cout << "\n\n";
 
 	if (option == 1)
 	{
