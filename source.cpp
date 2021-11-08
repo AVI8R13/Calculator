@@ -30,6 +30,77 @@ int yesNo()
 	}
 }
 
+void rev()
+{
+	system("cls");
+	
+	float rev;
+	float prof;
+	float days;
+	float tCost;
+	float varCost;
+	float fixCost;
+	float prodCost;
+	float sale;
+	float salery;
+	float wage;
+	char op;
+	
+	cout <<"Sales: ";
+	cin >> sale;
+	cout <<"\nProducts cost: ";		
+	cin >> prodCost;
+	rev = prodCost*sale;
+	cout <<sale << " * " << prodCost << " = " << rev;
+	cout <<"\nCalculate profit? [y/n]\n";
+	cin >> op;
+	if (op == 'y')
+	{
+		
+	}
+	else if (op == 'n')
+	{
+	yesNo();
+	}
+	else
+	{
+		cout << "Invalid Input\n";
+		system("pause");
+		business();
+	}
+	
+}
+
+void business()
+{
+	system("cls");
+
+	int op;
+	
+	cout << "Revenue [1]\nProfit [2]\nCosts [3]\nOption: ";
+	cin >> op;
+	
+	if (op == 1)
+	{
+		rev();
+	}
+	else if (op == 2)
+	{
+		
+	}
+	else if (op == 3)
+	{
+		
+	}
+	else
+	{
+		cout << "Invalid Input\n";
+		system("pause");
+		business();
+	}
+	
+}
+
 void toX()
 {
 	system("cls");
@@ -472,6 +543,12 @@ int main()
 	else if (option == 2)
 	{
 		Calc();
+	}
+	else if (option == 4643)
+	{
+		cout << "738392\n";
+		system("pause");
+		return main();
 	}
 	else
 	{
